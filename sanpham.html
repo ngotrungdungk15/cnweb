@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="../CSS/Css/trangchu.css">
+    <link rel="stylesheet" href="../CSS/Css/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/Css/sanpham.css">
+    <link rel="stylesheet" href="../CSS/ICON/Font_icon/themify-icons/themify-icons.css">
+    <script src="../JS/trangchu.js"></script>
+    <script src="../JS/jquery-3.6.0.min.js"></script>
+    <script src="../JS/poper-2.9.2.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="main" >
+        <!-- Header -->
+        <div id="header" >
+            <div class="img-logo">
+               <a href="../HTML/index.html"><img  src="../CSS/IMG/logo.jpg" alt="logo" title="logo cong ty"></a> 
+            </div>
+
+            <div class="form-search ">
+                <form class="form-inline" action="#">
+                    <input class="form-control" id="search" type="search" placeholder="Nhập thông tin tìm kiếm">
+                    <input class="btn ml-2 " type="button" value="Tìm">
+                </form>
+            </div>
+            
+        </div>
+        <!-- Navigation -->
+        <div id="main-nav">
+            <ul class="nav ">
+                <li class="nav-item"><div class="sub-bar"></div><a href="./index.html" class="nav-link text-white ">Trang chủ</a></li>
+                <li class="nav-item dropdown"><a href="./sanPham.html" class="nav-link text-white ">Sản phẩm</a>
+                    <div class="dropdown-menu">
+                        <a href="./sp-aokhoac.html" class="dropdown-item">áo khoác</a>
+                        <a href="./sp-aosomi.html" class="dropdown-item">áo sơ mi</a>
+                        <a href="./sp-quandai.html" class="dropdown-item">quần dài</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="./gioiThieu.html" class="nav-link text-white ">Giới thiệu</a></li>
+                <li class="nav-item"><a href="./hoTro.html" class="nav-link text-white ">Hỗ trợ</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white ">sitemap</a></li>
+            </ul>
+            <!-- respon -->
+            <div class="sub-menu">
+                <input type="checkbox" name="check" class="chk" id="chk-menu" >
+                <label for="chk-menu"><img class="sub-bar" src="../CSS/IMG/IMG-Trang-chu/Picture3.png" alt="sub-menu" ></label>
+                
+                <label for="chk-menu" class="bg_gray"></label>
+                <div class="subnav">
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><div class="sub-bar"></div><a href="./index.html" class="nav-link text-white ">Trang chủ </a></li>
+                        <li class="nav-item dropdown"><a href="./sanPham.html" class="nav-link text-white ">Sản phẩm</a>
+                            <div class="dropdown-menu">
+                                <a href="./sp-aokhoac.html" class="dropdown-item">Mac</a>
+                                <a href="./sp-aosomi.html" class="dropdown-item">Windows</a>
+                                <a href="./sp-quandai.html" class="dropdown-item">Phụ kiện</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="./gioiThieu.html" class="nav-link text-white ">Giới thiệu</a></li>
+                        <li class="nav-item"><a href="./hoTro.html" class="nav-link text-white ">Hỗ trợ</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-white ">sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- dang nhap dang ki -->
+            <div class="log-in-out">
+                <form class="form-inline" action="#">
+                    <input class="btn mr-2 text-white" type="button" value="Đăng nhập/Đăng ký" data-toggle="modal" data-target="#modalDangnhap" >
+                    
+                </form>
+                
+                
+            </div>
+        </div>
+        <!-- Modal đăng nhap -->
+        <div id="modalDangnhap" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <ul class="nav nav-tabs bg-dark" role="tablist">
+                        <li class="nav-item text-center"> 
+                            <a href="#" class="nav-link active " data-toggle="tab" data-target="#dangnhap">Đăng nhập</a></li>
+                        <li class="nav-item text-center"><a href="#" class="nav-link " data-toggle="tab" data-target="#dangki">Dăng ký</a></li>
+                    </ul>
+            <!-- Tab dang nhap/dang ki -->
+                    <div class="tab-content">
+                        <div id="dangnhap" class="tab-pane active ">
+                            <div class="form-input">
+                               
+                            <input type="text" class="form-control mt-5 " placeholder="Nhập email"> <span id="spMail" class="text-danger">*</span>
+                            
+                            <input type="password" class="form-control mt-5" placeholder="Nhập mật khẩu"><span id="spPass" class="text-danger">*</span>
+                            </div>
+                            <div class="btndangnhap text-center">
+                                <input id="dangnhap" type="submit" class="btn btn-dark mt-5 mb-5" value="Đăng nhập">
+                                <input type="button" class="btn btn-dark ml-3" value="Huỷ" data-dismiss="modal" &times;>
+                            </div>
+                            
+                        </div>
+                        <!-- tab pane dang ky -->
+                        <div id="dangki" class="tab-pane">
+                            <div class="form-input">
+                                <input type="text" class="form-control mt-5 " placeholder="Nhập email"> <span id="spMail" class="text-danger">*</span>
+                            
+                                <input type="password" class="form-control mt-2" placeholder="Nhập mật khẩu"><span id="spPass" class="text-danger">*</span>
+                                <input type="password" class="form-control mt-2" placeholder="Nhập lại mật khẩu"><span id="spRePass" class="text-danger">*</span>
+                                <input type="text" class="form-control mt-2" placeholder="Nhập họ tên"><span id="spName" class="text-danger">*</span>
+                                <input type="date" class="form-control mt-2" placeholder="Nhập ngày tháng năm sinh"><span id="spDate" class="text-danger">*</span>
+                                <div class="form-inine mt-2">
+                                    <input type="radio" name="Gioi tinh" id="rdNam" checked> <label for="rdNam"> Nam</label>
+                                    <input type="radio" name="Gioi tinh" id="rdNu"> <label for="rdNu"> Nữ</label>
+                                </div>
+                                <input type="text" class="form-control mt-2" placeholder="Nhập số điện thoại"><span id="spPhone" class="text-danger">*</span>
+
+                            </div>  
+                                <div class="btndangnhap text-center">
+                                    <input id="dangky" type="submit" class="btn btn-dark mt-5 mb-5" value="Đăng ký">
+                                    <input type="button" class="btn btn-dark ml-3" value="Huỷ" data-dismiss="modal" &times;>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider -->
+        
+       
+        <!-- content -->
+        <div id="content">
+            <div class="map-link ">
+                <a href="./index.html">Trang chủ /</a> 
+                <a href="./sanPham.html"> Sản phẩm /</a>
+            </div> 
+            <!-- Loai sp -->
+            <div class="sp-loaisp">
+                <div class="sp-loaisp-1 text-center">
+                        <a href="./sp-aokhoac.html"><img src="../CSS/IMG/img-aokhoac/aokhoac.jpg" alt="aokhoac"></a>
+                        <div><a href="./sp-aokhoac.html">ao khoac</a></div>
+                </div>
+                <div class="sp-loaisp-1 text-center" >
+                    <a href="./sp-aosomi.html"><img src="../CSS/IMG/img-aosomi/somi.jpg" alt="aosomi"></a>
+                    <div><a href="./sp-Windows.html">ao somi</a></div>
+                </div>
+                <div class="sp-loaisp-1 text-center" >
+                    <a href="./sp-quandai.html"><img src="../CSS/IMG/img-quandai/quandainen.jpg" alt="quandai"  ></a>
+                    <div><a href="./sp-quandai.html">quan dai</a></div>
+                </div>
+            </div>
+            <!-- SP mac-->
+            <div class="sp-loaisp-tittle text-center">
+                <a href="./sp-aokhoac.html">ao khoac</a>
+            </div>
+            <div class="motasp">
+                <div class="motasp-img ">
+                    <img src="../CSS/IMG/img-aokhoac/aokhoac2.jpg" alt="macbook">
+                </div>
+                <div class="motasp-chitiet text-center">
+                        <h5>Áo Khoác Hoodie Thần Cổ Đại Anubis Ver1</h3>
+                        <input class="btn " type="button" value="Xem chi tiết">
+                        <h4>Giá: 325.000 đ</h2>
+                </div>
+            </div>
+
+            <!-- SP Windows -->
+            <div class="sp-loaisp-tittle text-center">
+                <a href="./sp-aosomi.html">ao so mi</a>
+            </div>
+            <div class="motasp">
+                <div class="motasp-img ">
+                    <img src="../CSS/IMG/img-aosomi/aosomi.jpg" alt="surface book">
+                </div>
+                <div class="motasp-chitiet text-center">
+                        <h5>Sơ Mi Tay Dài Đơn Giản M18</h3>
+                        <input class="btn " type="button" value="Xem chi tiết">
+                        <h4>Giá: 285.000 đ</h2>
+                </div>
+            </div>
+
+            <!-- SP Phu kien -->
+            <div class="sp-loaisp-tittle text-center">
+                <a href="./sp-quandai.html">quan dai</a>
+            </div>
+            <div class="motasp">
+                <div class="motasp-img ">
+                    <img src="../CSS/IMG/img-quandai/quandainen.jpg" alt="macbook">
+                </div>
+                <div class="motasp-chitiet text-center">
+                        <h5>Quần Dài Tây Đơn Giản HG10</h3>
+                        <input class="btn " type="button" value="Xem chi tiết">
+                        <h4>Giá : 385.000 đ</h2>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="f-gioithieu">
+                <a href="../HTML/index.html"> <img src="../CSS/IMG/logo.jpg" alt="Logo" width="20%"></a>
+                <p>Tại đây, chúng tôi cung cấp cho bạn đầy đủ về các loại đồ thể thao, áo sơ mi, áo khoác, quần tây, kaki...với chất lượng tuyệt vời, mẫu mã đa dạng. Tất cả đều sẵn sàng cho bạn lựa chọn! </p>
+            </div>
+            <div class="f-diachi">
+               <span>Địa chỉ:</span>  12 Nguyễn Văn Bảo, P.4, Gò Vấp, TP.Hồ Chí Minh. <br>
+                <span>Hotline: </span>097123456
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
